@@ -56,3 +56,39 @@ footer{margin-top:2rem; background:rgba(30,41,59,.9); border-top:1px solid var(-
   flex: 1;
   min-width: 260px;
 }
+/* === Galeria de hobbies === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+  background: color-mix(in lab, var(--panel) 85%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery figcaption {
+  padding: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  background: rgba(0,0,0,0.2);
+}
+
+.gallery figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
