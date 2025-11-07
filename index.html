@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo Vitae</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Ícones (Font Awesome) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Vue (CDN) -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="container nav">
+        <a href="#" class="brand" @click.prevent="go('home')">
+          <i class="fa-solid fa-user-tech"></i> Meu CV
+        </a>
+        <nav>
+          <a href="#home"    :class="{active: section==='home'}"    @click.prevent="go('home')">Quem sou eu?</a>
+          <a href="#work"    :class="{active: section==='work'}"    @click.prevent="go('work')">O que faço</a>
+          <a href="#hobbies" :class="{active: section==='hobbies'}" @click.prevent="go('hobbies')">Hobbies</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <transition name="fade" mode="out-in">
+  <section v-if="section==='home'" key="home" class="card">
+    
+  </section>
+</transition>
+
+
+      <transition name="fade" mode="out-in">
+        <section v-if="section==='work'" key="work" class="card">
+          <h2><i class="fa-solid fa-briefcase"></i> O que faço</h2>
+          
+        </section>
+      </transition>
+
+      <transition name="fade" mode="out-in">
+        <section v-if="section==='hobbies'" key="hobbies" class="card">
+          <h2><i class="fa-solid fa-heart"></i> Hobbies</h2>
+          
+        </section>
+      </transition>
+    </main>
+
+    <footer>
+      <div class="container footer-wrap">
+        <span>&copy; <span id="year"></span> • Frederico Jamisse</span>
+        <div class="social">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:email@exemplo.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- App -->
+  <script src="js/app.js"></script>
+</body>
+</html>
