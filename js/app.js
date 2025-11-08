@@ -2,7 +2,10 @@ const { createApp } = Vue;
 
 createApp({
   data(){
-    return { section: 'home' }
+    return { section: 'home',
+      fullName: 'Frederico Jamisse',
+      role: 'E-Learning Developer'
+     }
   },
   methods:{
     go(sec){

@@ -32,13 +32,21 @@
     </header>
 
     <main class="container">
+      
+  <div class="identity card">
+    <img src="assets/Fred.jpg" alt="Foto de perfil" class="identity-photo" />
+    <div class="identity-info">
+      <h1 class="identity-name">{{ fullName }}</h1>
+      <p class="identity-role">{{ role }}</p>
+    </div>
+  </div>
       <transition name="fade" mode="out-in">
         <section v-if="section==='home'" key="home" class="card">
           <div class="profile">
-            <img src="assets/Fred.jpg" alt="Foto de perfil" class="profile-photo" />
+            
             <div class="profile-info">
-              <h2><i class="fa-solid fa-user"></i> Quem sou eu?</h2>
-              <p>Sou <strong>Frederico Jamisse</strong> - <strong>E-Learning Developer</strong> com sólida experiência
+              <h2></i> Sobre mim</h2>
+              <p>Possuo sólida experiência
                 no <strong>desenho, implementação e gestão de plataformas Moodle</strong>, com foco na criação de
                 ambientes digitais de aprendizagem eficazes, acessíveis e centrados no utilizador.</p>
 
